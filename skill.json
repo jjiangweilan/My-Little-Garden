@@ -1,0 +1,46 @@
+{
+  "skillManifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Improve kid's time management ability and mathematics ability by playing this game based and entertaining garden game! Playing and Improving alone the way!",
+          "examplePhrases": [
+            "Alexa, open my garden",
+            "report my garden",
+            "water flower number two for five times"
+          ],
+          "keywords": [
+            "game",
+            "kids",
+            "simulation",
+            "flower"
+          ],
+          "name": "My Little Garden",
+          "smallIconUri": "https://api.amazonalexa.com/v0/skills/amzn1.ask.skill.4b15972d-e9b6-444e-bb9f-fbec1eee56c7/images/eyJkIjoiY1duNnJGSjd0elZvNGVKMzgrWjZyOE9KZlM1WnYvRUgyUlY3RVhMN1dqS0ZNSURRbFlsUk5vUXNibnlNWitTcXNZWGw1Tk5vN1FBZFpzdFVWYjA4b0VaZU0zRkd0NTg3TERYKzVKalcyRjhrZ3pscUZSdUVlVW5jWHQydmtqMFciLCJpdiI6IktpRmJ6TVZxcDlac0dOczk4SndSMkE9PSIsInYiOjF9",
+          "description": "A game designed for kids to manage flowers. Please see the description to know how the game works.  \n\nStart your game by saying \"open my garden\", system will create a new game for you if you don't have previous game record or load your previous game. \n\nAfter entering the game, say \"report\" to get the flowers' initial information. You will start your game with one flower in seed stage and you will have maximum of 3 flowers to manage later. \n\nAfter your caring, the flower will grow to \"germination\", \"growth\", \"spreading\" stages. Try to keep the water amount  and the fertilizer amount as much as you can by saying something like \"water flower number one for five times\" and \"fertilize flower number one for three times\", but no more than 100%, which makes the flower drowned and poisoned. flower will be dried out if the water amount drop to 0%. Each action makes 10% difference in the original amount. Yes! the water amount and fertilizer amount is designed to decrease in real time! Check your flowers the second day you play and get a sense of the decreasing speed.\n\nThe reproduction will happen in spreading stage and the fertilizer amount will influence the reproduction rate of the flower. The more you keep it to the maximum the more possible it will generate the seeds (check back frequently to see if seeds are generated in this stage!) It takes about 11 days to reach spreading stage.\n\nIf too much water and fertilizer are applied to flowers, try saying \"pour out/dig our water/fertilizer on flower number one\". \n\nsay \"give me a hint\" for more secrete game information!\n\nsay \"stop\" to save and quit. Only deliberately quitting your game will make game saved!\n\nsay \"check my score\" to see your score.\n\nIf you can't play the game for a period of time, you can say \"pause\" to prevent water and fertilizer dropping till the next time you open the game\n\nDuring some period of the game stage, your flowers may attract birds to drop seeds in the garden!",
+          "largeIconUri": "https://api.amazonalexa.com/v0/skills/amzn1.ask.skill.4b15972d-e9b6-444e-bb9f-fbec1eee56c7/images/eyJkIjoiVXh2NDdUaS9scHFrRE1PUStncjhoNU1UekRRTm44R0hUNHJYMllFMDhuemVwTjFaUnByQllDckZES1ZvNVJ4V0E0NVpLT1NPcytZNVp0ZEJ3OXBsblpvU0lyRWh5cTdTVUdCUFRsYThhZ3VuZVcxS29zV3ZQT2swbjgyaE1Dclo1bUQxMHJGTnM1WWdHMXVjZ1J6Wkp3PT0iLCJpdiI6IlpIa2VjbkZPclpsUnROUmxlWlBYMWc9PSIsInYiOjF9"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "user have to deliberately stop or quit game to save the game",
+      "category": "CHILDRENS_GAMES",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": true,
+      "usesPersonalInfo": false
+    }
+  }
+}

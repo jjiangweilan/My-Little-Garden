@@ -1,0 +1,221 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my garden",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help",
+            "I need help",
+            "what to do"
+          ]
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": [
+            "pause",
+            "pause the game"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "save and quit",
+            "quit",
+            "stop"
+          ]
+        },
+        {
+          "name": "CheckScoreIntent",
+          "samples": [
+            "check my score",
+            "check score",
+            "check current score"
+          ]
+        },
+        {
+          "name": "DigIntent",
+          "slots": [
+            {
+              "name": "SlotNumber",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "Times",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "TheTimes",
+              "type": "TheTime"
+            }
+          ],
+          "samples": [
+            "dig out fertilizer on flower number {SlotNumber} {Times} {TheTimes}",
+            "dig out fertilizer on flower {SlotNumber} {Times} {TheTimes}",
+            "dig out fertilizer on flower {SlotNumber} for {Times} {TheTimes}",
+            "dig out fertilizer of flower number {SlotNumber} for {Times} {TheTimes}",
+            "dig out fertilizer on flower number {SlotNumber} for {Times} {TheTimes}"
+          ]
+        },
+        {
+          "name": "FertilizeIntent",
+          "slots": [
+            {
+              "name": "SlotNumber",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "Times",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "TheTime",
+              "type": "TheTime"
+            }
+          ],
+          "samples": [
+            "fertilize flower number {SlotNumber} for {Times} {TheTime}",
+            "fertilize flower {SlotNumber} for {Times} {TheTime}",
+            "fertilize flower {SlotNumber} {Times} {TheTime}",
+            "fertilize flower number {SlotNumber} {Times} {TheTime}"
+          ]
+        },
+        {
+          "name": "HintIntent",
+          "samples": [
+            "give me a hint",
+            "tell me a hint",
+            "any hint"
+          ]
+        },
+        {
+          "name": "LoadGameIntent",
+          "samples": [
+            "load game",
+            "load my game"
+          ]
+        },
+        {
+          "name": "NewGameIntent",
+          "samples": [
+            "start a new game"
+          ]
+        },
+        {
+          "name": "PourIntent",
+          "slots": [
+            {
+              "name": "SlotNumber",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "Times",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "TheTime",
+              "type": "TheTime"
+            }
+          ],
+          "samples": [
+            "pour out water on flower {SlotNumber} {Times} {TheTime}",
+            "pour out water on flower number {SlotNumber} {Times} {TheTime}",
+            "pour our water on flower {SlotNumber} for {Times} {TheTime}",
+            "pour out water of flower number {SlotNumber} for {Times} {TheTime}",
+            "pour out water on flower number {SlotNumber} for {Times} {TheTime}"
+          ]
+        },
+        {
+          "name": "ReportIntent",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "report",
+            "report my garden",
+            "report garden condition",
+            "report flower number {number}",
+            "report flower {number}",
+            "report number {number}",
+            "check number {number}",
+            "check flower {number}",
+            "check flower number {number}",
+            "check my garden"
+          ]
+        },
+        {
+          "name": "WaterIntent",
+          "slots": [
+            {
+              "name": "SlotNumber",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "Times",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "TheTime",
+              "type": "TheTime"
+            }
+          ],
+          "samples": [
+            "water flower number {SlotNumber} for {Times} {TheTime}",
+            "water flower {SlotNumber} for {Times} {TheTime}",
+            "water flower number {SlotNumber} {Times} {TheTime}",
+            "water flower {SlotNumber} {Times} {TheTime}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "time",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "times",
+                "synonyms": []
+              }
+            }
+          ],
+          "name": "TheTime"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "NewGameIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent-NewGameIntent"
+          }
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent-NewGameIntent",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Starting a new game will replace your previous game, if any, Are you sure to start a new game?"
+          }
+        ]
+      }
+    ]
+  }
+}
