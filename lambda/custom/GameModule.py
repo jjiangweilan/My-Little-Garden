@@ -97,7 +97,7 @@ class Game:
                 count += 1
                 stage = self.flowers[name].stage
         
-        if count == 1 or count == 2:
+        if count == 1:
             if ((delta / 86400) > 0.4) and (stage == Flower_Stage.GERMINATION or stage == Flower_Stage.GROWTH):
                 if random.uniform(0.0, 1.0) < 0.23:
                     for name in self.flowers:
